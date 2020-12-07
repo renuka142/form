@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+		
+		body{
+			background-image:url(unspasho.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		
+.avatar {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            top: calc(-80px/2);
+            left: calc(50% - 40px);
+        }
+
+
+
+	</style>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">ABOUT US<span class="sr-only">(current)</span></a>
+      </li>
+     
+     	<li class="nav-item active">
+        <a class="nav-link" href="#">CONTACT US<span class="sr-only">(current)</span></a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+	
+	<div class="container"><br>
+		
+		<div  class="col-lg-6 m-auto d-block">
+			<form  onsubmit="return validation();" method="post" action="mailto:bhurerenuka14@gmail.com" class="bg-light">
+				<div class="alert alert-success" role="alert">
+				<img src="2.jpg" class="avatar"><br><br>
+				<label><h2><b><u>FEEDBACK FORM</u></b></h2></label>
+				<div class="form-group">
+				
+					<label for="user" class="font-weight-bold"> Username: </label>
+					<input type="text" name="user" class="form-control" id="user" autocomplete="off">
+					<span id="username" class="text-danger font-weight-bold"> </span>
+				</div>
+				  
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Email: </label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" class="text-danger font-weight-bold"> </span>
+				</div>
+				<div class="form-group">
+                <input id="poll1" type="radio" name="website_poll" value="Male"/><b>Male</b><br/>
+                <input id="poll2" type="radio" name="website_poll" value="Female"/><b>Female</b><br/>
+                <input id="poll3" type="radio" name="website_poll" value="Other"/><b>Other</b><br/>
+                
+                
+                </div>
+ <div class="container">             
+  <label for="cars"><b>Choose a color:</b></label>
+  <input id="one" type="radio" name="c_one" value="Red"/><b>Red</b>
+                <input id="two" type="radio" name="c_one" value="Blue"/><b>Blue</b>
+                <input id="three" type="radio" name="c_one" value="Green"/><b>Green</b><br/>
+                
+  
+</div><br><br>
+				<input align="center" type="submit" name="submit" value="submit" class="btn btn-success" 	autocomplete="off">
+                <input id ="submit" type = "button" onclick="results()" value='display data' class="btn btn-success" 	autocomplete="off">
+
+			</form><br><br>
+</div>
+           
+            
+            <script>
+             function results()
+             {
+             
+             	var user=document.getElementById('user').value;
+             	var mobileNumber=document.getElementById('mobileNumber').value;
+                var emails=document.getElementById('emails').value;
+                if(document.getElementById('poll1').checked){
+                	poll=document.getElementById('poll1').value;
+                    }
+                else if(document.getElementById('poll2').checked){
+                	poll=document.getElementById('poll2').value;
+                    }
+                else{
+                	poll=document.getElementById('poll3').value;
+                    }
+                if(document.getElementById('one').checked){
+                	choose=document.getElementById('one').value;
+                    }
+                else if(document.getElementById('two').checked){
+                	choose=document.getElementById('two').value;
+                    }
+                else{
+                	choose=document.getElementById('three').value;
+                    }
+              
+                
+              document.write("<h1><u>THANKYOU FOR YOUR RESPONSE!!</u></h1>");
+                document.write("<b>username :</b>"+user+"<br/>");
+                document.write("<b>mobile number :</b>"+mobileNumber+"<br/>");
+                document.write("<b>email id :</b>"+emails+"<br/>");
+                document.write("<b>gender :</b>"+poll+"<br/>");
+             	document.write("<b>favourite color :</b>"+choose+"<br/>");
+
+             }
+            
+            
+            
+            
+            </script>
+
+
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var user = document.getElementById('user').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+
+
+
+
+
+			if(user == ""){
+				document.getElementById('username').innerHTML =" ** Please fill the username field";
+				return false;
+			}
+			if((user.length <= 2) || (user.length > 20)) {
+				document.getElementById('username').innerHTML =" ** Username length must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(user)){
+				document.getElementById('username').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" ** Please fill the mobile Number field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email id field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Position";
+				return false;
+			}
+			
+		}
+
+	</script>
+
+</body>
+</html>
